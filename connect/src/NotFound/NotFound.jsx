@@ -1,4 +1,3 @@
-// src/Pages/NotFound/NotFound.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './NotFound.css'; // Importing custom CSS for styling

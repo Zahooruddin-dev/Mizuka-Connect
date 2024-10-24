@@ -1,6 +1,6 @@
-// AuthLayout.js
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import './AuthLayout.css'; // Import the CSS file for styling
 
 function AuthLayout() {
 	return (
