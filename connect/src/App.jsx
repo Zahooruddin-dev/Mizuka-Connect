@@ -13,8 +13,8 @@ function App() {
 				<Route path='/' element={<AuthLayout />}>
 					<Route path='login' element={<Login />} />
 					<Route path='signup' element={<Signup />} />
-					<Route path='/home' element={<Home />} />
 				</Route>
+        <Route path='/home' element={<Home />} />
 
 				{/* Catch all other routes */}
 				<Route path='*' element={<NotFound />} />
