@@ -13,6 +13,7 @@ function Signup() {
 		e.preventDefault();
 		try {
 			await createUserWithEmailAndPassword(auth, email, password);
+			localStorage.setItem('loggedin', true);
 			alert('User created!');
 			navigate('/home');
 		} catch (error) {

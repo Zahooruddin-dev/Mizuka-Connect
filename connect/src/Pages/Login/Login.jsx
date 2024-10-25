@@ -13,6 +13,8 @@ function Login() {
 		e.preventDefault();
 		try {
 			await signInWithEmailAndPassword(auth, email, password);
+			localStorage.setItem('loggedin', true);
+
 			alert('Logged in successfully!');
 			navigate('/home');
 		} catch (error) {
