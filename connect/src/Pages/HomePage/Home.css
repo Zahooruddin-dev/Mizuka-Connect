@@ -1,29 +1,43 @@
 .home-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically */
-  height: 100vh; /* Full viewport height */
-  background-color: #D4F1F4; /* Light background */
-  text-align: center; /* Center text alignment */
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #D4F1F4;
   padding: 20px;
+  position: relative; /* For positioning the button */
 }
 
 .home-container h1 {
-  color: #05445E; /* Dark color for the heading */
+  color: #05445E;
   margin-bottom: 20px;
 }
 
 .home-container p {
-  color: #189AB4; /* Second color for paragraph text */
-  font-size: 1.2rem; /* Slightly larger font size */
-  margin-bottom: 20px; /* Space below the paragraph */
+  color: #189AB4;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
-.home-container button {
-  background-color: #189AB4; /* Button color */
+.post-form {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.post-form textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #75E6DA;
+  border-radius: 5px;
+}
+
+.post-form button {
+  background-color: #189AB4;
   color: white;
-  padding: 10px 20px; /* Padding for button */
+  padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -31,6 +45,32 @@
   transition: background-color 0.3s;
 }
 
-.home-container button:hover {
-  background-color: #05445E; /* Darker button on hover */
+.post-list {
+  width: 100%;
+  max-width: 400px;
+}
+
+.post {
+  background-color: #FFFFFF;
+  border: 1px solid #75E6DA;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.sign-out-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #189AB4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sign-out-button:hover {
+  background-color: #05445E;
 }
