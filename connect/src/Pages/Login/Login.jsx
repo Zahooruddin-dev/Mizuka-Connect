@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../firebase/Firebase";
-import { useNavigate } from "react-router-dom";
+import { useState } from 'react';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../../firebase/Firebase';
+import { useNavigate } from 'react-router-dom';
 import '../Auth.css'; // Importing custom CSS for styling
 
 function Login() {
@@ -23,24 +23,24 @@ function Login() {
 	};
 
 	return (
-		<div className="form-container">
+		<div className='form-container'>
 			<h2>Login</h2>
 			<form onSubmit={handleLogin}>
 				<input
-					type="email"
-					placeholder="Email"
+					type='email'
+					placeholder='Email'
 					value={email}
 					onChange={(e) => setEmail(e.target.value)}
 					required
 				/>
 				<input
-					type="password"
-					placeholder="Password"
+					type='password'
+					placeholder='Password'
 					value={password}
 					onChange={(e) => setPassword(e.target.value)}
 					required
 				/>
-				<button type="submit">Login</button>
+				<button type='submit'>Login</button>
 			</form>
 		</div>
 	);

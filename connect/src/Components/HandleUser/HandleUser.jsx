@@ -1,8 +1,14 @@
-import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
-import './AuthLayout.css'; // Import the CSS file for styling
+import { Link, Outlet, Navigate } from 'react-router-dom';
+import './AuthLayout.css'; // Import the CSS file for styling';
 
 function AuthLayout() {
+	const isLoggedIn = localStorage.getItem('loggedin'); // Check if user is logged in
+
+	if (isLoggedIn) {
+		// If logged in, redirect to the homepage
+		return <Navigate to="/home" />;
+	}
+
 	return (
 		<div className='auth-container'>
 			<h1>Welcome to Mizuka</h1>

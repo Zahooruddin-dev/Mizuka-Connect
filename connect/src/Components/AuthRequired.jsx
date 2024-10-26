@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import{ useEffect, useState } from "react";
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 import { getAuth,onAuthStateChanged } from "firebase/auth";
 // This is the Firebase AuthRequired component
