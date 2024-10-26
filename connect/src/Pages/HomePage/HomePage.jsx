@@ -3,6 +3,7 @@ import { useNavigate, Outlet } from 'react-router-dom';
 import './Home.css'; // Importing the CSS file for styling
 import PostForm from './Posts/PostForm';
 import PostList from './Posts/PostList';
+import Sidebar from './SideBar/SideBar';
 
 function Home() {
 	const navigate = useNavigate();
@@ -19,9 +20,11 @@ function Home() {
 	};
 
 	return (
+		<div className="app">
+
 		<div className="home-container">
-			{/* in future here is where you should have sidebar */}
-			<div className="main-content">
+		<Sidebar />
+		<div className="main-content">
 				<h1>Welcome to the Home Page</h1>
 				<p>You have successfully signed in or signed up!</p>
 				<PostForm userId={userId} onPostCreate={handlePostCreate} />
@@ -31,6 +34,7 @@ function Home() {
 
 			{/* Outlet for nested routes */}
 			<Outlet />
+		</div>
 		</div>
 	);
 }
