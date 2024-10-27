@@ -1,46 +1,51 @@
 .post {
   display: flex;
   align-items: flex-start;
-  border-bottom: 1px solid var(--twitter-background);
-  padding-bottom: 10px;
+  border-bottom: 1px solid var(--twitter-background); /* Border at the bottom of each post */
+  padding-bottom: 10px; /* Padding for spacing */
 }
 
 .post__body {
-  flex: 1;
-  padding: 10px;
+  flex: 1; /* Allow the body to grow */
+  padding: 10px; /* Padding inside the body */
 }
 
 .post__body > img {
-  border-radius: 20px;
+  border-radius: 20px; /* Rounded corners for images */
+  transition: transform 0.3s ease; /* Smooth scale transition on hover */
+}
+
+.post__body > img:hover {
+  transform: scale(1.05); /* Scale image slightly on hover */
 }
 
 .post__footer {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+  display: flex; /* Flexbox layout for footer */
+  justify-content: space-between; /* Space between footer items */
+  margin-top: 20px; /* Margin above footer */
 }
 
 .post__headerDescription {
-  margin-bottom: 10px;
-  font-size: 15px;
+  margin-bottom: 10px; /* Space below description */
+  font-size: 15px; /* Font size */
 }
 
 .post__headerText > h3 {
-  font-size: 15px;
-  margin-bottom: 5px;
+  font-size: 15px; /* Font size for header text */
+  margin-bottom: 5px; /* Space below header text */
 }
 
 .post__badge {
-  font-size: 14px !important;
-  color: var(--twitter-color);
+  font-size: 14px !important; /* Font size for badge */
+  color: var(--twitter-color); /* Color using Twitter theme */
 }
 
 .post__headerSpecial {
-  font-weight: 600;
-  font-size: 12px;
-  color: gray;
+  font-weight: 600; /* Bold weight for special header */
+  font-size: 12px; /* Font size for special header */
+  color: gray; /* Color for special header */
 }
 
 .post__avatar {
-  padding: 20px;
+  padding: 20px; /* Padding for avatar */
 }

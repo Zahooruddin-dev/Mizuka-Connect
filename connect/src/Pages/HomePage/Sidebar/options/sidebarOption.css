@@ -2,13 +2,13 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  transition: background-color 0.3s ease; /* Added transition for smoother hover effect */
 }
 
 .sidebarOption:hover {
   background-color: #e8f5fe;
   border-radius: 30px;
   color: var(--twitter-color);
-  transition: color 100ms ease-out;
 }
 
 .sidebarOption > .MuiSvgIcon-root {
