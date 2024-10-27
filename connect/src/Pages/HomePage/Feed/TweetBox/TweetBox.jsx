@@ -1,27 +1,44 @@
 // src/Pages/Feed/TweetBox.jsx
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from '@mui/material';
 import './TweetBox.css';
+import { db } from '../../../../firebase/Firebase';
+import { addDoc, collection } from 'firebase/firestore';
 
 const TweetBox = ({ setPosts }) => {
 	const [tweetMessage, setTweetMessage] = useState('');
 	const [tweetImage, setTweetImage] = useState('');
 
-	const sendTweet = (e) => {
+	const sendTweet = async (e) => {
 		e.preventDefault();
 
-		// Add new post to the list
 		if (tweetMessage) {
-			setPosts((prevPosts) => [
-				{
+			try {
+				// Add a new document to the "posts" collection
+				const docRef = await addDoc(collection(db, 'posts'), {
 					displayName: 'New User',
 					username: 'newuser',
 					verified: false,
 					text: tweetMessage,
 					image: tweetImage,
-				},
-				...prevPosts,
-			]);
+				});
+				console.log('Document written with ID: ', docRef.id);
+
+				// Add new post to the local state
+				setPosts((prevPosts) => [
+					{
+						id: docRef.id, // Store the Firestore document ID
+						displayName: 'New User',
+						username: 'newuser',
+						verified: false,
+						text: tweetMessage,
+						image: tweetImage,
+					},
+					...prevPosts,
+				]);
+			} catch (error) {
+				console.error('Error adding document: ', error);
+			}
 		}
 
 		// Clear input fields
