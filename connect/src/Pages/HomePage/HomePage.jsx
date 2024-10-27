@@ -13,28 +13,25 @@ function Home() {
 	function SignOut() {
 		localStorage.clear(); // This will clear all items in local storage
 		navigate('/login');
-	}	
+	}
 
 	const handlePostCreate = (post) => {
 		setPosts((prevPosts) => [...prevPosts, post]);
 	};
 
 	return (
-		<div className="app">
-
-		<div className="home-container">
-		<Sidebar />
-		<div className="main-content">
+		<div className='home-container'>
+			<Sidebar /> {/* Sidebar is fixed on the left */}
+			<div className='main-content'>
 				<h1>Welcome to the Home Page</h1>
 				<p>You have successfully signed in or signed up!</p>
 				<PostForm userId={userId} onPostCreate={handlePostCreate} />
 				<PostList posts={posts} />
-				<button className="sign-out-button" onClick={SignOut}>Sign Out</button>
+				<button className='sign-out-button' onClick={SignOut}>
+					Sign Out
+				</button>
+				<Outlet /> {/* Outlet for nested routes */}
 			</div>
-
-			{/* Outlet for nested routes */}
-			<Outlet />
-		</div>
 		</div>
 	);
 }
