@@ -1,0 +1,39 @@
+.feed {
+  flex: 1; /* Allow feed to take up available center space */
+  border-right: 1px solid var(--twitter-background);
+  border-left: 1px solid var(--twitter-background);
+  width: 100%; /* Make the feed responsive to screen width */
+  max-width: 600px; /* Limit max width to keep it readable */
+  background-color: #f5f8fa;
+  margin: 0 auto; /* Centers the feed in relation to sidebar and widget */
+  padding-bottom: 20px;
+  overflow-y: scroll;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.feed::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.feed {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.feed__header {
+  position: sticky;
+  top: 0;
+  background-color: #e6e9ec;
+  z-index: 100;
+  border-bottom: 1px solid var(--twitter-background);
+  padding: 15px 20px;
+}
+
+.feed__header > h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #333;
+  text-align: center;
+}

@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, Outlet } from 'react-router-dom';
 import './Home.css'; // Importing the CSS file for styling
-import PostForm from './Posts/PostForm';
-import PostList from './Posts/PostList';
+import PostForm from './Posts/Post';
 import Sidebar from './SideBar/SideBar';
+import Feed from './Feed/Feed';
 
 function Home() {
 	const navigate = useNavigate();
@@ -20,18 +20,12 @@ function Home() {
 	};
 
 	return (
-		<div className='home-container'>
+    <div className="app">
 			<Sidebar /> {/* Sidebar is fixed on the left */}
-			<div className='main-content'>
-				<h1>Welcome to the Home Page</h1>
-				<p>You have successfully signed in or signed up!</p>
-				<PostForm userId={userId} onPostCreate={handlePostCreate} />
-				<PostList posts={posts} />
-				<button className='sign-out-button' onClick={SignOut}>
-					Sign Out
-				</button>
+			<Feed/>
+		
 				<Outlet /> {/* Outlet for nested routes */}
-			</div>
+
 		</div>
 	);
 }

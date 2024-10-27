@@ -5,17 +5,19 @@
   cursor: pointer;
   padding: 10px;
   transition: background-color 100ms ease-out;
+  color: #05445E;
 }
 
 .sidebarOption:hover {
-  background-color: #e8f5fe;
+  background-color: #75E6DA;
   border-radius: 30px;
-  color: var(--twitter-color);
+  color: #189AB4;
 }
 
 .sidebarOption__icon {
   padding: 10px;
   font-size: 20px;
+  color: #05445E;
 }
 
 .sidebarOption > h2 {
@@ -25,5 +27,15 @@
 }
 
 .sidebarOption--active {
-  color: var(--twitter-color);
+  color: #189AB4;
+}
+
+@media (max-width: 768px) {
+  .sidebarOption__icon {
+    font-size: 18px;
+  }
+
+  .sidebarOption > h2 {
+    font-size: 16px;
+  }
 }
