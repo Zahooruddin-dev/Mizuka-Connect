@@ -1,48 +1,61 @@
+// src/Pages/Feed/TweetBox.jsx
 import { useState } from 'react';
-import './TweetBox.css';
 import { Button } from '@mui/material';
+import './TweetBox.css';
 
-function TweetBox() {
+const TweetBox = ({ setPosts }) => {
 	const [tweetMessage, setTweetMessage] = useState('');
 	const [tweetImage, setTweetImage] = useState('');
 
 	const sendTweet = (e) => {
 		e.preventDefault();
 
-		// You can later add back any database functionality here
+		// Add new post to the list
+		if (tweetMessage) {
+			setPosts((prevPosts) => [
+				{
+					displayName: 'New User',
+					username: 'newuser',
+					verified: false,
+					text: tweetMessage,
+					image: tweetImage,
+				},
+				...prevPosts,
+			]);
+		}
 
+		// Clear input fields
 		setTweetMessage('');
 		setTweetImage('');
 	};
 
 	return (
 		<div className='tweetBox'>
-			<form>
-				<div className='tweetBox__input'>
-					<input
-						onChange={(e) => setTweetMessage(e.target.value)}
-						value={tweetMessage}
-						placeholder="What's happening?"
-						type='text'
-					/>
-				</div>
+			<form onSubmit={sendTweet}>
+				{/* Message Input */}
 				<input
-					value={tweetImage}
-					onChange={(e) => setTweetImage(e.target.value)}
+					className='tweetBox__input'
+					placeholder="What's happening?"
+					value={tweetMessage}
+					onChange={(e) => setTweetMessage(e.target.value)}
+					required
+				/>
+
+				{/* Image URL Input */}
+				<input
 					className='tweetBox__imageInput'
 					placeholder='Optional: Enter image URL'
-					type='text'
+					value={tweetImage}
+					onChange={(e) => setTweetImage(e.target.value)}
 				/>
-				<Button
-					type='submit'
-					onClick={sendTweet}
-					className='tweetBox__tweetButton'
-				>
+
+				{/* Submit Button */}
+				<Button type='submit' className='tweetBox__tweetButton'>
 					Tweet
 				</Button>
 			</form>
 		</div>
 	);
-}
+};
 
 export default TweetBox;

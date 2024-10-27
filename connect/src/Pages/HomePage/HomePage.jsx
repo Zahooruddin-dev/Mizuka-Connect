@@ -4,7 +4,7 @@ import './Home.css'; // Importing the CSS file for styling
 import PostForm from './Posts/Post';
 import Sidebar from './SideBar/SideBar';
 import Feed from './Feed/Feed';
-
+import Widgets from '../Widget/Widget';
 function Home() {
 	const navigate = useNavigate();
 	const [posts, setPosts] = useState([]);
@@ -23,7 +23,7 @@ function Home() {
     <div className="app">
 			<Sidebar /> {/* Sidebar is fixed on the left */}
 			<Feed/>
-		
+			<Widgets/>
 				<Outlet /> {/* Outlet for nested routes */}
 
 		</div>
