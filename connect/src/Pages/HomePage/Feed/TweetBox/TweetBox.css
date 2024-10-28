@@ -1,58 +1,63 @@
 .tweetBox {
-  padding-bottom: 10px; /* Space at the bottom */
-  border-bottom: 8px solid var(--twitter-background); /* Bottom border color */
-  padding-right: 10px; /* Right padding */
-  background-color: var(--twitter-background); /* Match homepage background */
-  border-radius: 10px; /* Optional: rounded corners for aesthetic */
+	padding-bottom: 10px; /* Space at the bottom */
+	border-bottom: 8px solid var(--twitter-background); /* Bottom border color */
+	padding-right: 10px; /* Right padding */
+	background-color: var(--twitter-background); /* Match homepage background */
+	border-radius: 10px; /* Optional: rounded corners for aesthetic */
 }
 
 .tweetBox > form {
-  display: flex; /* Use flexbox layout */
-  flex-direction: column; /* Arrange children vertically */
+	display: flex; /* Use flexbox layout */
+	flex-direction: column; /* Arrange children vertically */
 }
 
 .tweetBox__input {
-  padding: 20px; /* Inner padding */
-  display: flex; /* Flex layout for input */
-  background-color: var(--twitter-background); /* Match background */
-  border-radius: 10px; /* Optional: rounded corners for input */
+	padding: 20px; /* Inner padding */
+	display: flex; /* Flex layout for input */
+	background-color: var(--twitter-background); /* Match background */
+	border-radius: 10px; /* Optional: rounded corners for input */
 }
 
 .tweetBox__input > input {
-  flex: 1; /* Take available space */
-  margin-left: 20px; /* Space to the left */
-  font-size: 20px; /* Font size */
-  border: none; /* Remove border */
-  background-color: transparent; /* Ensure input background is transparent */
-  transition: border 0.3s ease; /* Smooth transition for border */
+	flex: 1; /* Take available space */
+	margin-left: 20px; /* Space to the left */
+	font-size: 20px; /* Font size */
+	border: none; /* Remove border */
+	background-color: transparent; /* Ensure input background is transparent */
+	transition: border 0.3s ease; /* Smooth transition for border */
 }
 
 /* Optional hover effect for input */
 .tweetBox__input > input:hover {
-  border: 1px solid var(--twitter-color); /* Border color change on hover */
+	border: 1px solid var(--twitter-color); /* Border color change on hover */
 }
 
 .tweetBox__imageInput {
-  border: none; /* Remove any border */
-  padding: 10px; /* Inner padding */
-  background-color: var(--twitter-background); /* Match homepage background */
+	border: none; /* Remove any border */
+	padding: 10px; /* Inner padding */
+	background-color: var(--twitter-background); /* Match homepage background */
 }
 
 .tweetBox__tweetButton {
-  background-color: var(--twitter-color) !important; /* Button background color */
-  border: none !important; /* Remove border */
-  color: white !important; /* Button text color */
-  font-weight: 900 !important; /* Font weight */
-  text-transform: inherit !important; /* Inherit text transformation */
-  border-radius: 30px !important; /* Rounded corners */
-  width: 80px; /* Fixed width */
-  height: 40px !important; /* Fixed height */
-  margin-top: 20px !important; /* Top margin */
-  margin-left: auto !important; /* Align to the right */
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
+	background-color: var(
+		--twitter-color
+	) !important; /* Button background color */
+	border: none !important; /* Remove border */
+	color: white !important; /* Button text color */
+	font-weight: 900 !important; /* Font weight */
+	text-transform: inherit !important; /* Inherit text transformation */
+	border-radius: 30px !important; /* Rounded corners */
+	width: 80px; /* Fixed width */
+	height: 40px !important; /* Fixed height */
+	margin-top: 20px !important; /* Top margin */
+	margin-left: auto !important; /* Align to the right */
+	transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
 /* Optional hover effect for tweet button */
 .tweetBox__tweetButton:hover {
-  background-color: darken(var(--twitter-color), 10%); /* Darker shade on hover */
+	background-color: darken(
+		var(--twitter-color),
+		10%
+	); /* Darker shade on hover */
 }
