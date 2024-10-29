@@ -20,12 +20,11 @@ function Home() {
 	};
 
 	return (
-    <div className="app">
+		<div className='app'>
 			<Sidebar /> {/* Sidebar is fixed on the left */}
-			<Feed/>
-			<Widgets/>
-				<Outlet /> {/* Outlet for nested routes */}
-
+			<Feed />
+			<Widgets />
+			<Outlet /> {/* Outlet for nested routes */}
 		</div>
 	);
 }
